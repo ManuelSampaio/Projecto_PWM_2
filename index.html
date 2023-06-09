@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilo1.css">
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <title>Colégio JHS</title>
+</head>
+<body>
+
+    <header>
+        <!--Area para o cabeçalho da página-->
+        <!--Inclui o logotipo, botão de login-->
+        <div id="logo">
+        <h1>JHS</h1>
+        <p>O seu lugar do saber</p>
+        </div>
+
+        <div id="menu">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">JHS</a>
+                <button class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="HTML/curso.html">Cursos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="HTML/inscrição.html">Inscrição</a></li>
+                        <li class="nav-item"><a class="nav-link" href="HTML/faq.html">FQA</a></li>
+                        <li class="nav-item"><a class="nav-link" href="HTML/servico.html">Serviços</a></li>
+                    </ul>
+                    <button class="btn btn-dark" type="submit">Entrar</button>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+    <main class="princ">
+        <!--Conteúdo principal do site-->
+        <!--Inclui a descrição do colegio, notícias-->
+        
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="Imagens/carousel.jpeg" class="d-block w-100" alt="imagem">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Estude conosco</h1>
+                  <p class="lead">Venha estudar conosco e tenha acesso aos melhores recursos de estudo e professores de excelência.</p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="/Imagens/c-1.jpg" class="d-block w-100" alt="imagem">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1></h1>
+                  <p class="lead"></p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="img/carousel-3.JPG" class="d-block w-100" alt="imagem">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1>Os Mais Pequenos</h1>
+                  <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis quod sequi qui velit!</p>
+              </div>
+          </div>
+      </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+    </main>
+    <footer>
+        <!--Rodapé da pagina-->
+        <!--Inclui links para as redes sociais-->
+        <P>Site Criado por Manuel Sampaio| José Ulo| Hernany Zua</P>
+    </footer>
+</body>
+</html>

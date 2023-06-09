@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt" class=" js csstransforms csstransforms3d csstransitions">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="keyword" content="JHS Incrição online">
+		<meta name="description" content="Sistema de Gestão escolar Web">
+        <link rel="stylesheet" href="../CSS/estilo1.css">
+		<title>Inscrição - JHS</title>
+		<!-- Bootstrap -->
+		<link href="../css1/bootstrap.min.css" rel="stylesheet">
+		<!-- Template CSS Files  -->
+		<link rel="stylesheet" href="../css1/all.min.css">
+		<link rel="stylesheet" href="../css1/animate.min.css">
+		<link rel="stylesheet" href="../css1/responsive.css">
+		<link rel="stylesheet" href="../css1/owl.carousel.min.css">
+		<link rel="stylesheet" href="../css1/select2.min.css">
+		<link rel="stylesheet" href="../css1/sweetalert-custom.css">
+		<link rel="stylesheet" href="../css1/bootstrap-datepicker.standalone.css">
+		<link rel="stylesheet" href="../css1/bootstrap-fileupload.min.css">
+		<link rel="stylesheet" href="../css1/magnific-popup.css">
+
+			<link rel="stylesheet" href="../css1/style_blue.css">
+			<script src="../css1/jquery.min.js.transferir"></script>
+		<!-- If user have enabled CSRF proctection this function will take care of the ajax requests and append custom header for CSRF -->
+		<script type="text/javascript">
+			var base_url = "https://www.elsamina.net/";
+			var csrfData = {"school_csrf_name":"92590302e4408948b6f654f1c329eed0"};
+			$(function($) {
+				$.ajaxSetup({
+					data: csrfData
+				});
+			});
+		</script>
+	</head>
+	<body cz-shortcut-listen="true">
+        <header>
+            <!--Area para o cabeçalho da página-->
+            <!--Inclui o logotipo, botão de login-->
+            <div id="logo">
+            <h1>JHS</h1>
+            <p>O seu lugar do saber</p>
+            </div>
+            <div id="menu">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container">
+                    <a class="navbar-brand" href="#">JHS</a>
+                    <button class="navbar-toggler"  type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="../index.html">Início</a></li>
+                            <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="inscrição.html">Inscrição</a></li>
+                            <li class="nav-item"><a class="nav-link" href="faq.html">FQA</a></li>
+                            <li class="nav-item"><a class="nav-link" href="servico.html">Serviços</a></li>
+                        </ul>
+                        <button class="btn btn-dark" type="submit">Entrar</button>
+                    </div>
+                </div>
+            </nav>
+            </div>
+        </header>
+		<!-- Preloader -->
+		<div class="loader-container loader-fadeout">
+			<div class="lds-dual-ring"></div>
+		</div>
+		
+<!-- Header Ends -->		<!-- Main Banner Starts -->
+<div class="main-banner" style="background: url(../Imagens/c-.jpg)  center top;">
+    <div class="container px-md-0">
+        <h2><span>Admissão</span></h2>
+    </div>
+</div>
+<!-- Breadcrumb Ends -->
+<!-- Main Container Starts -->
+<div class="container px-md-0 main-container">
+    <h3 class="main-heading2 mt-0">Faça sua inscrição</h3>
+    <p>Preencha correctamente todos os campos do formulário. </p>
+    <div class="box2 form-box">
+        <div class="tabs-panel tabs-product">
+            <div class="nav nav-tabs">
+                <a class="nav-item nav-link active" data-toggle="tab" href="https://www.elsamina.net/home/admission#new-admission" role="tab" aria-controls="tab-details" aria-selected="true">Nova admissão</a>
+            </div>
+            <div class="tab-content clearfix">
+                <div class="tab-pane fade show active" id="new-admission" role="tabpanel" aria-labelledby="tab-new-admission">
+                    <form action="https://www.elsamina.net/home/admission" class="form-horizontal frm-submit-data" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                    <input type="hidden" name="school_csrf_name" value="92590302e4408948b6f654f1c329eed0">
+                    <div class="headers-line mt-3"><i class="fas fa-school"></i>Detalhes Academicos</div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Nome da escola <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="schoolname" value="JHS" readonly="">
+                                </div>
+                            </div>
+                <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Classe <span class="required">*</span></label>
+                    <select name="class_id" class="form-control select2-hidden-accessible" data-plugin-selecttwo="" onchange="getSectionByClass(this.value)" tabindex="-1" aria-hidden="true">
+                    <option value="" selected="selected">selecionar</option>
+                    <option value="1">10ª Classe</option>
+                    <option value="2">11ª Classe</option>
+                    <option value="3">12ª Classe</option>
+                    <option value="4">13ª Classe</option>
+                    </select>
+                  <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection">
+                    <span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-class_id-jd-container"><span class="select2-selection__rendered"id="select2-class_id-jd-container" title="selecionar">selecionar</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span><span class="error"></span>
+     </div>
+     </div>
+         <div class="col-md-4">
+         <div class="form-group">
+            <label class="control-label">Curso <span class="required">*</span></label>
+    <select name="section" class="form-control select2-hidden-accessible" data-plugin-selecttwo="" id="section_id" tabindex="-1" aria-hidden="true">
+      <option value="" selected="selected">Selecione a primeira classe</option>
+    </select>
+      <span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-section_id-container"><span class="select2-selection__rendered" id="select2-section_id-container" title="Selecione a primeira classe">Selecione a primeira classe</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <span class="error"></span>
+        </div>
+         </div>
+      </div>
+                <div class="row">
+                <div class="col-md-6">
+                <div class="form-group">
+                <label for="admission_date">Data de Inscrição <span class="required">*</span></label>
+                <input type="text" class="form-control" data-plugin-datepicker="" name="admission_date" readonly="" value="2023-06-05" id="admission_date" autocomplete="off">
+                 <span class="error"></span>
+                </div>
+            </div>
+      <div class="col-md-6">
+        <div class="form-group">
+            <label for="admission_date">Categoria <span class="required">*</span></label>
+        <select name="category" class="form-control select2-hidden-accessible" data-plugin-selecttwo="" data-width="100%" id="category_id" data-minimum-results-for-search="Infinity" tabindex="-1" aria-hidden="true">
+         <option value="" selected="selected">selecionar</option>
+         <option value="1">Admintração e serviços</option>
+         <option value="2">Informática</option>
+         <option value="3">Construção Cívil</option>
+        </select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-category_id-container"><span class="select2-selection__rendered" id="select2-category_id-container" title="selecionar">selecionar</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                        <div class="headers-line mt-3"><i class="fas fa-user-graduate"></i>Dados do Estudante</div>
+                        <div class="row">
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Primeiro nome <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="first_name" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Ultimo nome <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="last_name" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Genero</label>
+                                    <select name="gender" class="form-control select2-hidden-accessible" data-plugin-selecttwo="" tabindex="-1" aria-hidden="true">
+<option value="" selected="selected">selecionar</option>
+<option value="male">Masculino</option>
+<option value="female">Fêmea</option>
+</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-gender-kj-container"><span class="select2-selection__rendered" id="select2-gender-kj-container" title="selecionar">selecionar</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                        <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="birthday">Data de nascimento</label>
+                                    <input type="text" class="form-control" data-plugin-datepicker="" name="birthday" readonly="" value="" id="birthday" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                        <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="mobile_no">Telefone nº</label>
+                                    <input type="text" name="student_mobile_no" class="form-control" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="email">E-mail do aluno</label>
+                                    <input type="text" name="student_email" class="form-control" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                                                <div class="row">
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Língua nativa</label>
+                                    <input type="text" class="form-control" name="mother_tongue" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Religião</label>
+                                    <input type="text" class="form-control" name="religion" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">BI nº</label>
+                                    <input type="text" class="form-control" name="caste" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                                    <div class="row">
+                                     <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Endereço Actual</label>
+                                    <textarea class="form-control" name="present_address" rows="2" placeholder="Enter Present Address"></textarea>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Endereço Permanente</label>
+                                    <textarea class="form-control" name="permanent_address" rows="2" placeholder="Enter Permanent Address"></textarea>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+                                                <div class="row">
+                                                        <div class="col-md-6 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Cidade</label>
+                                    <input type="text" class="form-control" name="city" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Próvincia</label>
+                                    <input type="text" class="form-control" name="state" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                        <!--custom fields details-->
+                        <div class="row" id="customFields">
+                            <div class="col-md-3 mb-sm"><div class="form-group"><label class="control-label">Período</label><input type="text" class="form-control" autocomplete="off" name="custom_fields[student][1]" value=""><span class="error"></span></div></div><div class="col-md-3 mb-sm"><div class="form-group"><label class="control-label">Turma</label><input type="text" class="form-control" autocomplete="off" name="custom_fields[student][2]" value=""><span class="error"></span></div></div>                        </div>
+                                                <div class="row">
+                            <div class="col-md-12 mb-sm">
+                                <div class="form-group">
+                                    <label for="message">Foto do Estudante</label>
+                                    <div class="custom-file">
+                                        <input type="file" name="student_photo" class="custom-file-input" id="photoFile" accept=".jpg,.jpeg,.png,.bmp" onchange="changeCustomUploader(this)">
+                                        <label class="custom-file-label" for="photoFile">Escolha uma foto...</label>
+                                    </div>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- previous school details -->
+                        <div class="headers-line">
+                            <i class="fas fa-bezier-curve"></i> Detalhes da escola anterior                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Nome da Escola</label>
+                                    <input type="text" class="form-control" name="school_name" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-sm">
+                                <div class="form-group">
+                                    <label class="control-label">Qualificação</label>
+                                    <input type="text" class="form-control" name="qualification" value="">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-lg">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Observações</label>
+                                    <textarea name="previous_remarks" rows="2" class="form-control"></textarea>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                <div class="headers-line mt-3"><i class="fas fa-user-tie"></i>Dados do Encarregado</div>
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Nome do Encarregado <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="guardian_name" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Relação <span class="required">*</span></label>
+                                    <input type="text" name="guardian_relation" class="form-control" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="father_name">Nome do pai</label>
+                                    <input type="text" name="father_name" class="form-control" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="mother_name">Nome da Mãe</label>
+                                    <input type="text" name="mother_name" class="form-control" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+                                                <div class="row">
+                                                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Ocupação <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="guardian_occupation" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Renda <span class="required">*</span></label>
+                                    <input class="form-control" name="guardian_income" value="" type="text" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="control-label">Educação <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="guardian_education" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Email do Encarregado <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="guardian_email" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Telefone do Encarregado <span class="required">*</span></label>
+                                    <input type="text" class="form-control" name="guardian_mobile_no" value="" autocomplete="off">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+                                                <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message">Enderesso do Encarregado  <span class="required">*</span></label>
+                                    <textarea class="form-control" name="guardian_address" placeholder="Enter Address"></textarea>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Cidade do Encarregado</label>
+                                    <input class="form-control" name="guardian_city" value="" type="text">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                        <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Próvincia</label>
+                                    <input class="form-control" name="guardian_state" value="" type="text">
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                                                    </div>
+
+                                                <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="message">Foto do Encarregado</label>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" name="guardian_photo" id="guardianPhoto" accept=".jpg,.jpeg,.png,.bmp" onchange="changeCustomUploader(this)">
+                                        <label class="custom-file-label" for="guardianPhoto">Escolha uma foto</label>
+                                    </div>
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                                                <div class="headers-line mt-3"><i class="far fa-file-archive"></i>Carregar documentos</div>
+                        <div class="form-group">
+                            <label for="message">Carregar documentos <span class="required">*</span></label>
+                            <div class="custom-file">
+                                <input type="file" name="upload_documents" class="custom-file-input" id="documentFile" onchange="changeCustomUploader(this)">
+                                <label class="custom-file-label" for="documentFile">Escolha um ficheiro</label>
+                            </div>
+                            <span class="error"></span>
+                        </div>
+        <button type="submit" class="btn btn-1" data-loading-text="&lt;i class=&#39;fas fa-spinner fa-spin&#39;&gt;&lt;/i&gt; Processing"><i class="fas fa-plus-circle"></i> Enviar</button>
+</form>                
+</div>
+            </div>
+        </div>
+    </div>
+</div>		
+<!-- JS Files -->
+<script src="../css1/bootstrap.min.js.transferir"></script>
+<script src="../css1/bootstrap-fileupload.min.js.transferir"></script>
+<script src="../css1/owl.carousel.min.js.transferir"></script>
+<script src="../css1/jquery.shuffle.modernizr.min.js.transferir"></script>
+<script src="../css1/select2.full.min.js.transferir"></script>
+<script src="../css1/bootstrap-datepicker.min.js.transferir"></script>
+<script src="../css1/sweetalert.min.js.transferir"></script>
+<script src="../css1/jquery.magnific-popup.min.js.transferir"></script>
+<script src="../css1/custom.js.transferir"></script>
+</body>
+
+<footer>
+    <!--Rodapé da pagina-->
+    <!--Inclui links para as redes sociais-->
+    <P>Site Criado por Manuel Sampaio| José Ulo| Hernany Zua</P>
+</footer>
+</html>
